@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { Content_Layout, Loading_Screen } from "./components/index";
 
 const App: React.FC = () => {

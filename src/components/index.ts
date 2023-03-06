@@ -11,6 +11,7 @@ import Loading_Screen from "./Loading_Screen";
 import Content_Layout from "./Content_Layout";
 import Title_Animation from "./Title_Animation";
 import Title_Array from "./Title_Array";
+import "tw-elements";
 
 export {
   Nav_Bar,
