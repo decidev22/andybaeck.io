@@ -168,7 +168,7 @@
   height: 300px;
   overflow-x: auto;
   padding: 20px 0;
-  /* flex: 0 0 600px; */
+  flex: 0 0 800px;
   margin: 0 auto;;
 
 }
