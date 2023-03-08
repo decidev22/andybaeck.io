@@ -73,7 +73,7 @@ const Nav_Bar = () => {
           <img src={logo} alt="jogger" className="w-[32px] h-[32px]" />
         </motion.div>
       </motion.div>
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 bg-primary">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}

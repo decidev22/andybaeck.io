@@ -1,3 +1,5 @@
+import { Project } from "../components";
+
 export const navLinks = [
   {
     id: "home",
@@ -10,6 +12,10 @@ export const navLinks = [
   {
     id: "project",
     title: "Project",
+  },
+  {
+    id: "blog",
+    title: "Blog",
   },
   {
     id: "talktome",

@@ -42,6 +42,7 @@ const Skill = ({ skill_item }: SkillProps) => {
       variants={skillAppear}
       initial="hidden"
       animate={control}
+      transition={{ delay: 5 }}
     >
       <div>{skill_item}</div>
     </motion.div>

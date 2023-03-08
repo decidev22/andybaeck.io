@@ -74,6 +74,7 @@ const Main_Page = () => (
       </h1> */}
       <My_Interest />
       <p className={`${styles.paragraph} max-w-[480px] mt-5 py-10`}></p>
+      <div></div>
     </div>
   </section>
 );
