@@ -10,6 +10,8 @@ import python from "./python.svg";
 import react from "./react.svg";
 import typescript from "./typescript.svg";
 import vitejs from "./vitejs.svg";
+import email_logo from "./email_logo.svg";
+import linkedin_logo from "./linkedin_logo.png";
 export {
   logo,
   menu,
@@ -23,4 +25,6 @@ export {
   react,
   typescript,
   vitejs,
+  email_logo,
+  linkedin_logo,
 };

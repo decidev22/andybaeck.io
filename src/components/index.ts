@@ -1,5 +1,5 @@
 import Nav_Bar from "./Nav_Bar";
-import Contact from "./Contact";
+import Contact_Modal from "./Contact_Modal";
 import Footer from "./Footer";
 import Blog from "./Blog";
 import Main_Page from "./Main_Page";
@@ -15,7 +15,7 @@ import "tw-elements";
 
 export {
   Nav_Bar,
-  Contact,
+  Contact_Modal,
   Footer,
   Blog,
   Main_Page,

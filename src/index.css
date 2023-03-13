@@ -101,7 +101,7 @@
   );
 }
 
-.bg-discount-gradient {
+.bg-banner-gradient {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
@@ -190,4 +190,55 @@
   flex: 0 0 100px;
   background: var(--accent);
   margin: 0 20px 0 0;
+}
+
+
+
+/* Contact_Modal */
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: black;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+  border-radius: 0.75rem;
+}
+
+.close-modal {
+  position: relative;
+  bottom: 10px;
+  left: 100px;
+  top: 10px;
+  padding: 10px 10px;
+  font-weight: bold;
+  color: whitesmoke;
 }

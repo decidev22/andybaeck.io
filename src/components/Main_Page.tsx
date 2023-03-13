@@ -2,7 +2,7 @@ import styles from "../style";
 import React, { useState, useEffect } from "react";
 import { JogR_mini_logo, SeeMyCode } from "../assets";
 import { motion } from "framer-motion";
-import { Title_Array, Greeting, My_Interest } from ".";
+import { Title_Array, Greeting, My_Interest, Contact_Modal } from ".";
 const electronicViolet: string = "#8C04DB";
 
 const Main_Page = () => (
@@ -15,7 +15,7 @@ const Main_Page = () => (
     >
       {/* <div className="absolute inset-0 rounded-lg"></div> */}
       <div className="flex flex-1">
-        <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
+        <div className="flex flex-row items-center py-[6px] px-4 bg-banner-gradient rounded-[10px] mb-2">
           <motion.div
             className="flex flex-row"
             animate={{
@@ -49,7 +49,8 @@ const Main_Page = () => (
           </p>
         </div>
         <div className="relative ml-4 h-10 w-30">
-          <div className="relative group">
+          <Contact_Modal />
+          {/* <div className="relative group">
             {" "}
             <div className="absolute inset-0 bg-indigo-500 rounded-lg blur group-hover:bg-violet-500 transition duration-1000 group-hover:duration-100"></div>
             <button className="flex items-center relative bg-primary rounded-lg p-2">
@@ -57,7 +58,7 @@ const Main_Page = () => (
                 Talk To Me!
               </span>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       <Greeting />
@@ -90,11 +91,11 @@ const Main_Page = () => (
       <p className={`${styles.paragraph} max-w-[480px] mt-5 py-10`}></p>
       <div></div>
     </div>
-    <div className="fixed bottom-0 right-0 text-transparent">
+    {/* <div className="fixed bottom-0 right-0 text-transparent">
       <span>Today</span>
       <br />
       <span>Visits</span>
-    </div>
+    </div> */}
   </section>
 );
 

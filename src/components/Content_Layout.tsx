@@ -10,7 +10,7 @@ import {
   About_Me,
   Project,
   Blog,
-  Contact,
+  Contact_Modal,
   Footer,
 } from "./index";
 // import Nav_Bar from "./Nav_Bar";
@@ -40,7 +40,7 @@ const Content_Layout = ({}) => {
         <div className={`${styles.boxWidth}`}>
           <Project />
           <Blog />
-          <Contact />
+          {/* <Contact_Modal /> */}
           <Footer />
         </div>
       </div>
