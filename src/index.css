@@ -50,6 +50,19 @@
   text-fill-color: transparent;
 }
 
+.bg-talktome-gradient  {
+  background: linear-gradient(
+    157.81deg,
+    #647DEE -43.27%,
+    #9EABE4 -21.24%,
+    #AFF6CF 12.19%,
+    #7de7eb 29.82%,
+    #9F98E8 51.94%,
+    #7F53AC 90.29%
+  );
+}
+
+
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,

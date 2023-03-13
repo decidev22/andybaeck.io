@@ -37,14 +37,14 @@ const Skill = ({ skill_item }: SkillProps) => {
 
   return (
     <motion.div
-      className="skill"
+      className="skill font-semibold"
       ref={ref}
       variants={skillAppear}
       initial="hidden"
       animate={control}
-      transition={{ delay: 5 }}
+      transition={{ delay: 1 }}
     >
-      <div>{skill_item}</div>
+      <div className="hover:scale-110">{skill_item}</div>
     </motion.div>
   );
 };
@@ -77,12 +77,13 @@ const About_Me = () => {
             <div
               className={`${styles.paragraph} ml-14 text-white font-poppins`}
             >
-              I believe every code and service can be improved.{" "}
-              <br className="sm:block hidden" /> {"  "}Sometimes it's the
-              algorithm or design. <br className="sm:block hidden" /> {"  "}{" "}
-              Sometimes it's how we see the world through software.{" "}
-              <br className="sm:block hidden" /> {"  "}I love sharing thoughts
-              and learning new knowledge.
+              Innovating services with Software.{" "}
+              <br className="sm:block hidden" /> {"  "}I believe every code and
+              service can be improved. <br className="sm:block hidden" /> {"  "}
+              Sometimes it's the algorithm or design.{" "}
+              <br className="sm:block hidden" /> {"  "} Sometimes it's how we
+              see the world through software. <br className="sm:block hidden" />{" "}
+              {"  "}I love sharing thoughts and learning new knowledge.
               <br className="sm:block hidden" /> {"  "}
             </div>
             <br className="sm:block hidden" />
@@ -93,7 +94,7 @@ const About_Me = () => {
               Skills and Certificates <br className="sm:block hidden" /> {"  "}
             </div>
             <motion.div
-              className={`${styles.paragraph} ml-14 text-white font-poppins`}
+              className={`${styles.paragraph} mt-4 ml-14 font-poppins text-white`}
             >
               <Skill skill_item="Bachelor of Science in Computer Science (University of Auckland)" />
               <br className="sm:block hidden" /> {"  "}
@@ -103,7 +104,7 @@ const About_Me = () => {
               <br className="sm:block hidden" /> {"  "}
               <Skill skill_item="Graph Developer - Associate (Appolo GraphQL)" />
               <br className="sm:block hidden" /> {"  "}
-              <Skill skill_item="Serverless and Microservices for AWS" />
+              <Skill skill_item="Serverless and Microservices for AWS (LinkedIn Learning)" />
               <br className="sm:block hidden" /> {"  "}
               <Skill skill_item="Data Visualisation with Python (FutureLearn)" />
               <br className="sm:block hidden" /> {"  "}
