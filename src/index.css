@@ -222,23 +222,55 @@ body.active-modal {
 .modal-content {
   position: absolute;
   top: 40%;
-  left: 50%;
+  right: 0;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: black;
-  padding: 14px 28px;
+  padding: 20px 28px;
   border-radius: 3px;
-  max-width: 600px;
-  min-width: 300px;
+  max-width: 800px;
+  min-width: 400px;
   border-radius: 0.75rem;
 }
 
 .close-modal {
   position: relative;
   bottom: 10px;
-  left: 100px;
-  top: 10px;
+  left: 150px;
+  top: -160px;
   padding: 10px 10px;
   font-weight: bold;
   color: whitesmoke;
+}
+
+/* Wave motion for Modal */
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background:#8C04DB;
+  width: 300px;
+  height: 300px;
+  margin-left: 20px;
+  margin-top: -180px;
+  transform-origin: 50% 45%;
+  border-radius: 41%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: #fbedfb;
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
 }

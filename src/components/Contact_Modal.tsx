@@ -26,12 +26,18 @@ const Contact_Modal = () => {
         </button>
       </div>
       {modal && (
-        <div className="modal">
+        <div className="modal font-poppins">
           <div className="overlay" onClick={toggleModal}></div>
-          <div className="flex flex-col modal-content text-white">
-            <p className="flex">My Contact Details</p>
+          <div className="flex flex-col modal-content text-white overflow-hidden">
+            <div className="wave -one" />
+            <div className="wave -two" />
+            <div className="wave -three" />
+            <p className="flex text-xs">Business Card</p>
+            <p className="text-lg">Andy Baeck</p>
+            <p className="">Junior Software Engeinner</p>
+            <br />
             <div>
-              <div className="flex hover:scale-110" onClick={LinkedIn_Link}>
+              <div className="flex hover:scale-105 p-1" onClick={LinkedIn_Link}>
                 <img
                   src={linkedin_logo}
                   alt="LinkedIn"
@@ -39,9 +45,12 @@ const Contact_Modal = () => {
                   onClick={LinkedIn_Link}
                 />
 
-                <p className="ml-1">Click to visit my LinkedIn Profile</p>
+                <p className="ml-1 text-blue-200">
+                  Click to visit my LinkedIn Profile
+                </p>
               </div>
-              <div className="flex">
+              <div className="flex p-1">
+                {/* mailbox icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
