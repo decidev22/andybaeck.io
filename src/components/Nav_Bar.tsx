@@ -25,38 +25,10 @@ const Nav_Bar = () => {
     /* Initially false */
   }
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
+    <nav className="w-full flex py-2 justify-between items-center navbar">
       <span className="absolute font-poppins font-bold text-white -mt-4 ml-7 text-[22px]">
         <Title_Array />
       </span>
-
-      {/* <motion.svg
-        className="absolute inset-0 flex justify-start items-center"
-        width="410"
-        height="300"
-        viewBox="0 0 600 600"
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.line
-          x1="125"
-          y1="120"
-          x2="155"
-          y2="50"
-          stroke="#ff0055"
-          custom={3.5}
-          variants={draw}
-          delay
-          animate={{ x: 435 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            delay: 5,
-            type: "spring",
-            duration: "5",
-          }}
-        />
-      </motion.svg> */}
       <motion.div layout>
         <motion.div
           className="flex flex-row relative -ml-3"

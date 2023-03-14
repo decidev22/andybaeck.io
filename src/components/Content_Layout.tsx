@@ -21,13 +21,22 @@ import {
 const Content_Layout = ({}) => {
   return (
     <div className="relative bg-primary w-full">
-      <div className={`${styles.paddingX} ${styles.flexCenter} sticky top-0`}>
+      <div
+        className={`${styles.paddingX} ${styles.flexCenter} sticky top-0 z-10 bg-primary`}
+      >
         <div className={`${styles.boxWidth}`}>
           <Nav_Bar />
         </div>
       </div>
-      <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
         <div className={`${styles.boxWidth}`}>
+          <div className="relative">
+            <div className="absolute">
+              <div className="mainwave -one" />
+              <div className="mainwave -two" />
+              <div className="mainwave -three" />
+            </div>
+          </div>
           <Main_Page />
         </div>
       </div>

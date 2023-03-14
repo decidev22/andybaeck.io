@@ -89,13 +89,7 @@ const Main_Page = () => (
       </h1> */}
       <My_Interest />
       <p className={`${styles.paragraph} max-w-[480px] mt-5 py-10`}></p>
-      <div></div>
     </div>
-    {/* <div className="fixed bottom-0 right-0 text-transparent">
-      <span>Today</span>
-      <br />
-      <span>Visits</span>
-    </div> */}
   </section>
 );
 

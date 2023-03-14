@@ -2,11 +2,7 @@ import styles from "../style";
 import React, { Component } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 
-const texts = [
-  "Hello, I'm Andy",
-  "안녕하세요, 저는 Andy 입니다",
-  "Kia Ora, I'm Andy",
-];
+const texts = ["Hello, I'm Andy", "Kia Ora, I'm Andy"];
 const randomNumber = () => Math.floor(Math.random() * 9999999999 + 100000);
 
 class Greeting extends React.Component {
