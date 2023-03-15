@@ -30,13 +30,14 @@ const Content_Layout = ({}) => {
       </div>
       <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
         <div className={`${styles.boxWidth}`}>
-          <div className="relative">
+          {/* Waves removed from page for rebuild */}
+          {/* <div className="relative">
             <div className="absolute">
               <div className="mainwave -one" />
               <div className="mainwave -two" />
               <div className="mainwave -three" />
             </div>
-          </div>
+          </div> */}
           <Main_Page />
         </div>
       </div>

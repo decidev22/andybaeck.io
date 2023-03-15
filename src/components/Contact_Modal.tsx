@@ -18,7 +18,7 @@ const Contact_Modal = () => {
         {" "}
         <div className="absolute inset-0 bg-indigo-500 rounded-lg blur group-hover:bg-violet-500 transition duration-1000 group-hover:duration-100"></div>
         <button
-          className="flex items-center relative bg-banner-gradient rounded-lg p-2"
+          className="flex items-center relative bg-talktome-gradient rounded-lg p-2"
           onClick={toggleModal}
         >
           <span className="grid place-items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-poppins font-bold opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">

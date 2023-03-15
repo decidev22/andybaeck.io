@@ -50,6 +50,22 @@
   text-fill-color: transparent;
 }
 
+.text-gradient-blue {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #509DCD 0.89%,
+    #338BC5 17.23%,
+    #0778B9 42.04%,
+    #006AB2 55.12%,
+    #0159AA 71.54%,
+    #01489C 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .bg-talktome-gradient  {
   background: linear-gradient(
     157.81deg,
@@ -103,6 +119,10 @@
 
 .bg-banner-gradient {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.bg-talktome-gradient {
+  background: linear-gradient(125.17deg, #12131f 0%, #0f0f27 100%);
 }
 
 .box-shadow {
@@ -281,7 +301,7 @@ body.active-modal {
   position: relative;
   top: 350px;
   right: -180%;
-  background:#4036c4;
+  background:#6b65bd;
   width: 900px;
   height: 900px;
   margin-left: 40px;
@@ -295,7 +315,7 @@ body.active-modal {
   position: relative;
   top: -1450px;
   animation: drift 5000ms infinite linear;
-  background:#2a12b1;
+  background:#5e50b0;
 }
 
 .mainwave.-two {
@@ -305,3 +325,5 @@ body.active-modal {
   opacity: .1;
   background: #494cde;
 }
+
+/* Projects */
