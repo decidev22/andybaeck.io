@@ -252,8 +252,8 @@ body.active-modal {
 }
 .modal-content {
   position: absolute;
-  top: 30%;
-  right: 25%;
+  top:40%;
+  right:20%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: black;
@@ -262,6 +262,15 @@ body.active-modal {
   max-width: 800px;
   min-width: 400px;
   border-radius: 0.75rem;
+}
+
+@media (max-width: 780px) {
+  /* Styles for screens smaller than 640px */
+  .modal-content {
+    top: 40%;
+    right: 46%;
+    transform: translate(0, -50%);
+  }
 }
 
 .close-modal {

@@ -15,7 +15,7 @@ const Loading_Screen: React.FC<Props> = () => {
           transition={{ duration: 2, repeat: Infinity }}
           className="w-[65px] h-[65px] mt-7 mr-2"
         />
-        <div className="font-poppins font-bold text-white text-[65px]">
+        <div className="font-poppins font-bold text-white xs:text-[40px] md:text-[65px]">
           <Title_Array />
         </div>
       </div>
