@@ -118,7 +118,7 @@
 }
 
 .bg-banner-gradient {
-  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  background: linear-gradient(125.17deg, #212121 0%, #0f0e1b 100%);
 }
 
 .bg-talktome-gradient {
@@ -210,6 +210,17 @@
   flex: 0 0 100px;
   background: var(--accent);
   margin: 0 20px 0 0;
+}
+
+/* Project box */
+
+.project-box-ul {
+  display: flex;
+  list-style: none;
+  height: 800px;
+  overflow-x: auto;
+  flex: 0 0 800px;
+  margin: 0 auto;;
 }
 
 
