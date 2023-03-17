@@ -252,8 +252,9 @@ body.active-modal {
 }
 .modal-content {
   position: absolute;
-  top:40%;
-  right:20%;
+  display: flex;
+  top:47%;
+  right:-10%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: black;
@@ -264,12 +265,76 @@ body.active-modal {
   border-radius: 0.75rem;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 390px) {
   /* Styles for screens smaller than 640px */
   .modal-content {
-    top: 40%;
-    right: 46%;
+    top: 50%;
+    right: 0;
     transform: translate(0, -50%);
+  }
+}
+
+@media (min-width: 390px) and (max-width: 640px) {
+  /* Styles for screens between 640px and 1024px */
+  .modal-content {
+    top: 50%;
+    right: 3%;
+    transform: translate(0, -50%);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 42%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 30%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1600px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 22%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1920px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 18%;
+    right: 18%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@media (min-width: 1921px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 18%;
+    right: 18%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 3000px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 10%;
+    right: 30%;
+    transform: translate(-50%, -50%);
   }
 }
 

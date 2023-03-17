@@ -68,11 +68,10 @@ const About_Me = () => {
           {/* <br className="sm:block hidden" /> {"  "} */}
           <span className="text-gradient-purple">About Me</span> {"  "}
         </h1>
-        <div className="flex flex-col md:flex-row">
-          <div>
+        <div className="flex xs:flex-col md:flex-row overflow-hidden">
+          <div className="flex flex-col">
             <div className={`${styles.heading2} ml-14 text-white font-poppins`}>
-              Innovate Software with <br className="ss:block hidden" /> Better
-              Engineering and Ideas{" "}
+              Bringing dreams to realality <br className="ss:block hidden" />{" "}
             </div>
             <div
               className={`${styles.paragraph} ml-14 text-white font-poppins`}

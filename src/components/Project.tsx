@@ -41,9 +41,9 @@ const Project = () => {
   return (
     <section
       id="project"
-      className={`flex items-start xs:flex-row flex-col ${styles.paddingY} min-h-screen`}
+      className={`flex items-start xs:flex-row flex-col ${styles.paddingY} min-h-screen overflow-auto`}
     >
-      <div className="text-white font-poppins overflow-x-hidden">
+      <div className="text-white font-poppins">
         <h1
           className={`${styles.heading1} flex font-semibold ss:text-[60px] text-[52px] text-white ss:leading-[100px] leading-[75px]`}
         >
