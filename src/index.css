@@ -193,23 +193,39 @@
   animation-delay: 3s;
 }
 
-/* Skill ul list */
-
+/* This is a CSS class for a list of logos representing skills */
 .skil-logo-box-ul {
+  /* This sets the display property to flex, allowing for flexible layout */
   display: flex;
+  /* This removes the default bullet points from the list */
   list-style: none;
+  /* This sets the height of the list to 300 pixels */
   height: 300px;
+  /* This allows for horizontal scrolling if the list exceeds the width of its container */
   overflow-x: auto;
+  /* This sets padding on the top and bottom of the list */
   padding: 20px 0;
+  /* This sets the flex property to 0 0 800px, which means the list will not grow or shrink and has a width of 800 pixels */
   flex: 0 0 800px;
-  margin: 0 auto;;
-
+  /* This centers the list horizontally within its container */
+  margin: 0 auto;
 }
 
 .skill-log-li {
   flex: 0 0 100px;
   background: var(--accent);
   margin: 0 20px 0 0;
+}
+
+/* Skill and Cert box */
+
+.cert-box-ul {
+  display: flex;
+  list-style: none;
+  height: 800px;
+  overflow-x: auto;
+  flex: 0 0 800px;
+  margin: 0 auto;;
 }
 
 /* Project box */
