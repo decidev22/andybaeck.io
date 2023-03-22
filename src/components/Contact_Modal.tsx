@@ -27,7 +27,7 @@ const Contact_Modal = () => {
         </button>
       </div>
       {modal && (
-        <div className="modal font-poppins">
+        <div className="modal font-poppins z-10">
           <div className="overlay" onClick={toggleModal}></div>
 
           <div className="flex flex-col modal-content text-white overflow-hidden">
