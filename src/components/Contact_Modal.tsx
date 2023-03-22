@@ -22,7 +22,7 @@ const Contact_Modal = () => {
           onClick={toggleModal}
         >
           <span className="grid place-items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-poppins font-bold opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
-            Talk To Me!
+            Business Card
           </span>
         </button>
       </div>

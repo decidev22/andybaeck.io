@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@react-three/fiber": "^8.11.10",
+    "firebase": "^9.18.0",
     "framer-motion": "^10.0.2",
     "framer-motion-3d": "^10.2.3",
     "prop-types": "^15.8.1",

@@ -2,7 +2,14 @@ import styles from "../style";
 import React, { useState, useEffect } from "react";
 import { JogR_mini_logo, SeeMyCode } from "../assets";
 import { motion } from "framer-motion";
-import { Title_Array, Greeting, My_Interest, Contact_Modal } from ".";
+import {
+  Title_Array,
+  Greeting,
+  My_Interest,
+  Contact_Modal,
+  SendMe_Message,
+  Message_Box,
+} from ".";
 const electronicViolet: string = "#8C04DB";
 
 const Main_Page = () => (
@@ -48,18 +55,6 @@ const Main_Page = () => (
             FrontEnd, SWE
           </p>
         </div>
-        <div className="relative ml-4 h-10 w-30">
-          <Contact_Modal />
-          {/* <div className="relative group">
-            {" "}
-            <div className="absolute inset-0 bg-indigo-500 rounded-lg blur group-hover:bg-violet-500 transition duration-1000 group-hover:duration-100"></div>
-            <button className="flex items-center relative bg-primary rounded-lg p-2">
-              <span className="grid place-items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-poppins font-bold opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
-                Talk To Me!
-              </span>
-            </button>
-          </div> */}
-        </div>
       </div>
       <Greeting />
       <motion.div
@@ -82,13 +77,29 @@ const Main_Page = () => (
       </motion.div>
 
       <h1 className="font-poppins font-semibold ss:text-[65px] text-[50px] text-white ss:leading-[100px] leading-[75px] w-full">
-        from New Zealand. <br /> {"  "}I am interested in...
+        from New Zealand <br /> {"  "}I am interested in...
       </h1>
       {/* <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[80px] leading-[55px]">
         <br className="sm:block hidden" /> {"  "}
       </h1> */}
       <My_Interest />
-      <p className={`${styles.paragraph} max-w-[480px] mt-5 py-10`}></p>
+      <div className="ml-4 h-10 w-30 py-10">
+        <Contact_Modal />
+        {/* <div className="relative group">
+            {" "}
+            <div className="absolute inset-0 bg-indigo-500 rounded-lg blur group-hover:bg-violet-500 transition duration-1000 group-hover:duration-100"></div>
+            <button className="flex items-center relative bg-primary rounded-lg p-2">
+              <span className="grid place-items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-poppins font-bold opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                Talk To Me!
+              </span>
+            </button>
+          </div> */}
+      </div>
+      <div className="flex flex-col mt-5 items-center sm:flex-row">
+        <SendMe_Message />
+
+        <Message_Box />
+      </div>
     </div>
   </section>
 );

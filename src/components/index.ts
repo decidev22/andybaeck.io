@@ -11,7 +11,8 @@ import Loading_Screen from "./Loading_Screen";
 import Content_Layout from "./Content_Layout";
 import Title_Animation from "./Title_Animation";
 import Title_Array from "./Title_Array";
-import "tw-elements";
+import SendMe_Message from "./Sendme_Message";
+import Message_Box from "./Message_Box";
 
 export {
   Nav_Bar,
@@ -27,4 +28,6 @@ export {
   Content_Layout,
   Title_Animation,
   Title_Array,
+  SendMe_Message,
+  Message_Box,
 };

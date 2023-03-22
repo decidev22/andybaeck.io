@@ -269,8 +269,8 @@ body.active-modal {
 .modal-content {
   position: absolute;
   display: flex;
-  top:47%;
-  right:-10%;
+  top:85%;
+  right:5%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: black;
@@ -311,7 +311,7 @@ body.active-modal {
 @media (min-width: 1201px) and (max-width: 1440px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 30%;
+    top: 50%;
     right: 5%;
     transform: translate(-50%, -50%);
   }
@@ -320,8 +320,8 @@ body.active-modal {
 @media (min-width: 1441px) and (max-width: 1600px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 22%;
-    right: 5%;
+    top: 85%;
+    right: 35%;
     transform: translate(-50%, -50%);
   }
 }
@@ -329,8 +329,8 @@ body.active-modal {
 @media (min-width: 1601px) and (max-width: 1920px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 18%;
-    right: 18%;
+    top: 85%;
+    right: 40%;
     transform: translate(-50%, -50%);
   }
 }
@@ -339,8 +339,17 @@ body.active-modal {
 @media (min-width: 1921px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 18%;
-    right: 18%;
+    top: 75%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 2560px) {
+  /* Styles for screens larger than 1024px */
+  .modal-content {
+    top: 53%;
+    right: 45%;
     transform: translate(-50%, -50%);
   }
 }
@@ -348,8 +357,8 @@ body.active-modal {
 @media (min-width: 3000px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 10%;
-    right: 30%;
+    top: 45%;
+    right: 40%;
     transform: translate(-50%, -50%);
   }
 }
