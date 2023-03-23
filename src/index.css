@@ -121,6 +121,10 @@
   background: linear-gradient(125.17deg, #212121 0%, #0f0e1b 100%);
 }
 
+.bg-messagebox-gradient {
+  background: linear-gradient(125.17deg, #1b1c24 0%, #100e21 100%);
+}
+
 .bg-talktome-gradient {
   background: linear-gradient(125.17deg, #12131f 0%, #0f0f27 100%);
 }

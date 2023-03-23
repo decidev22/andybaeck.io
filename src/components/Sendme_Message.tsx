@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Message_Box from "./Message_Box";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 const firebaseConfig = {

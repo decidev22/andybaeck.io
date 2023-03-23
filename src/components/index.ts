@@ -13,6 +13,7 @@ import Title_Animation from "./Title_Animation";
 import Title_Array from "./Title_Array";
 import SendMe_Message from "./Sendme_Message";
 import Message_Box from "./Message_Box";
+import Chat_Box from "./Chat_Box";
 
 export {
   Nav_Bar,
@@ -30,4 +31,5 @@ export {
   Title_Array,
   SendMe_Message,
   Message_Box,
+  Chat_Box,
 };

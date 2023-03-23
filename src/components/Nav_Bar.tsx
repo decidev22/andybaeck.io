@@ -3,6 +3,7 @@ import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import Title_Array from "./Title_Array";
+import Contact_Modal from "./Contact_Modal";
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -26,9 +27,10 @@ const Nav_Bar = () => {
   }
   return (
     <nav className="w-full flex py-2 justify-between items-center navbar">
-      <span className="absolute font-poppins font-bold text-white -mt-4 ml-7 text-[22px]">
+      <span className="flex flex-1 absolute font-poppins font-bold text-white -mt-4 ml-7 text-[22px]">
         <Title_Array />
       </span>
+
       <motion.div layout>
         <motion.div
           className="flex flex-row relative -ml-3"
@@ -45,6 +47,7 @@ const Nav_Bar = () => {
           <img src={logo} alt="jogger" className="w-[32px] h-[32px]" />
         </motion.div>
       </motion.div>
+
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 bg-primary">
         {navLinks.map((nav, index) => (
           <li
