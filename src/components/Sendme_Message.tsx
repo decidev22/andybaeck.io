@@ -33,6 +33,12 @@ const Sendme_Message = () => {
 
   const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const trimmedMessage = message.trim();
+    const trimmedName = name.trim();
+    if (!(trimmedMessage && trimmedName)) {
+      // message is empty or contains only whitespace characters
+      return;
+    }
     const timestamp = firebase.database.ServerValue.TIMESTAMP;
     const filteredName = containsFoulWord(name) ? "***" : name;
     const filteredMessage = containsFoulWord(message) ? "***" : message;

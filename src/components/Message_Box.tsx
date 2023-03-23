@@ -30,8 +30,12 @@ const Message_Box = () => {
           <h2 className="font-bold bg-gradient-to-r from-blue-800 to-violet-800 w-20 text-center rounded-lg">
             {item.name}
           </h2>
-          <p className="text-gray-300">Message: {item.message}</p>
-          <p>
+          <p className="inline-flex flex-wrap px-1 mt-1 text-gray-100 py-1">
+            <span className="bg-gradient-to-r from-blue-500 to-violet-500 rounded-lg px-2">
+              Message: {item.message}
+            </span>
+          </p>
+          <p className="text-xs">
             {timestampDate.toLocaleDateString() +
               " " +
               timestampDate.toLocaleTimeString()}
