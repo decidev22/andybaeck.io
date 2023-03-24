@@ -96,7 +96,7 @@ const Chat_Box = () => {
     const trimmedName = name.trim();
     if (!(trimmedMessage && trimmedName)) {
       // message is empty or contains only whitespace characters
-      return;
+      return console.log("Error sending message: empty string");
     }
     const timestamp = firebase.database.ServerValue.TIMESTAMP;
     const filteredName = containsFoulWord(name) ? "***" : name;
@@ -146,17 +146,15 @@ const Chat_Box = () => {
                   className="flex ml-2 rounded-lg bg-gray-800 w-full"
                 ></input>
               </div>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="w-full mt-2 mb-2 mr-2 p-2 bg-gradient-to-r from-blue-800 to-violet-700 rounded-lg font-bold h-min"
+                type="submit"
+              >
+                SEND MESSAGE
+              </motion.button>
             </form>
           </div>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
-            className="mt-2 ml-3 mb-2 mr-2 p-2 bg-gradient-to-r from-blue-800 to-violet-700 rounded-lg font-bold h-min"
-            type="submit"
-          >
-            SEND MESSAGE
-          </motion.button>
         </div>
       </div>
     </div>
