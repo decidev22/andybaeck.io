@@ -77,7 +77,7 @@ const Message_Box = () => {
   messageElements.reverse();
 
   return (
-    <div className="bg-banner-gradient rounded-lg px-1 ml-5 w-[400px] text-white h-[500px] overflow-y-auto">
+    <div className="relative bg-banner-gradient rounded-lg px-1 ml-5 w-[400px] text-white h-[500px] overflow-y-auto">
       <div className="text-gray-400 font-bold sticky top-0 bg-banner-gradient py-1">
         Message Box (refresh to view your message)
       </div>
@@ -116,45 +116,48 @@ const Chat_Box = () => {
       });
   };
   return (
-    <div className="flex flex-col items-center ms:flex-row bg-banner-gradient rounded-lg">
-      <Message_Box />
-      <div className="flex flex-row grid w-full">
-        <div className="flex flex-col text-white mt-2 font-poppins p-2">
-          <form
-            className="flex-col bg-messagebox-gradient rounded-lg p-1"
-            onSubmit={handleSend}
+    <div className="relative group">
+      <div className="absolute inset-0 bg-indigo-600 rounded-lg blur group-hover:bg-violet-400 transition duration-1000 group-hover:duration-100"></div>
+      <div className="relative flex flex-col items-center ms:flex-row bg-banner-gradient rounded-lg">
+        <Message_Box />
+        <div className="relative flex flex-row grid w-full">
+          <div className="flex flex-col text-white mt-2 font-poppins p-2">
+            <form
+              className="flex-col bg-messagebox-gradient rounded-lg p-1"
+              onSubmit={handleSend}
+            >
+              <div className="flex flex-1">
+                <label>Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="flex ml-2 rounded-lg bg-gray-800"
+                ></input>
+              </div>
+              <div className="flex flex-1 mt-1">
+                <label>Message:</label>
+                <input
+                  type="text"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="flex ml-2 rounded-lg bg-gray-800 w-full"
+                ></input>
+              </div>
+            </form>
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            className="mt-2 ml-3 mb-2 mr-2 p-2 bg-gradient-to-r from-blue-800 to-violet-700 rounded-lg font-bold h-min"
+            type="submit"
           >
-            <div className="flex flex-1">
-              <label>Name:</label>
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="flex ml-2 rounded-lg bg-gray-800"
-              ></input>
-            </div>
-            <div className="flex flex-1 mt-1">
-              <label>Message:</label>
-              <input
-                type="text"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="flex ml-2 rounded-lg bg-gray-800 w-full"
-              ></input>
-            </div>
-          </form>
+            SEND MESSAGE
+          </motion.button>
         </div>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
-          className="mt-2 ml-3 mb-2 mr-2 p-2 bg-gradient-to-r from-blue-800 to-violet-700 rounded-lg font-bold h-min"
-          type="submit"
-        >
-          SEND MESSAGE
-        </motion.button>
       </div>
     </div>
   );
