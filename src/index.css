@@ -315,8 +315,8 @@ body.active-modal {
 @media (min-width: 1201px) and (max-width: 1440px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 50%;
-    right: 5%;
+    top: 35%;
+    right: -10%;
     transform: translate(-50%, -50%);
   }
 }
@@ -324,8 +324,8 @@ body.active-modal {
 @media (min-width: 1441px) and (max-width: 1600px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 85%;
-    right: 35%;
+    top: 30%;
+    right: 15%;
     transform: translate(-50%, -50%);
   }
 }
@@ -333,8 +333,8 @@ body.active-modal {
 @media (min-width: 1601px) and (max-width: 1920px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 85%;
-    right: 40%;
+    top: 30%;
+    right: 18%;
     transform: translate(-50%, -50%);
   }
 }
@@ -352,8 +352,8 @@ body.active-modal {
 @media (min-width: 2560px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 53%;
-    right: 45%;
+    top: 20%;
+    right: 19%;
     transform: translate(-50%, -50%);
   }
 }
@@ -361,8 +361,8 @@ body.active-modal {
 @media (min-width: 3000px) {
   /* Styles for screens larger than 1024px */
   .modal-content {
-    top: 45%;
-    right: 40%;
+    top: 18%;
+    right: 24%;
     transform: translate(-50%, -50%);
   }
 }
