@@ -21,13 +21,6 @@ import {
 const Content_Layout = ({}) => {
   return (
     <div className="relative bg-primary w-full">
-      <div
-        className={`${styles.paddingX} ${styles.flexCenter} sticky top-0 z-10 bg-primary`}
-      >
-        <div className={`${styles.boxWidth}`}>
-          <Nav_Bar />
-        </div>
-      </div>
       <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
         <div className={`${styles.boxWidth}`}>
           {/* Waves removed from page for rebuild */}
@@ -49,8 +42,11 @@ const Content_Layout = ({}) => {
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Project />
+        </div>
+      </div>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
           <Blog />
-          {/* <Contact_Modal /> */}
           <Footer />
         </div>
       </div>

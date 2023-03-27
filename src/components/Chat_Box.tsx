@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDmex83-Fbpv8UXbcyqQ2CzJpe-lciisTA",
@@ -38,7 +39,7 @@ interface Message {
 const Message_Box = () => {
   const [data, setData] = useState<Message[]>([]);
 
-  useEffect(() => {
+  const fetchData = () => {
     fetch("https://us-central1-blog-node-a90e4.cloudfunctions.net/getData")
       .then((response) => response.json())
       .then((data) => {
@@ -46,6 +47,16 @@ const Message_Box = () => {
         console.log(data);
       })
       .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchData();
+
+    const interval = setInterval(() => {
+      fetchData();
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
   if (!data) return null; // added conditional statement
 
@@ -56,9 +67,9 @@ const Message_Box = () => {
       const timestampDate = new Date(item.timestamp);
       messageElements.push(
         <div key={key} className="flex flex-col rounded-lg font-poppins">
-          <h2 className="font-bold bg-gradient-to-r from-blue-800 to-violet-800 w-min px-2 text-center rounded-lg">
+          <div className="whitespace-nowrap font-bold bg-gradient-to-r from-blue-800 to-violet-800 w-min px-2 text-center rounded-lg">
             {item.name}
-          </h2>
+          </div>
           <p className="inline-flex flex-wrap px-1 mt-1 text-gray-100 py-1">
             <span className="bg-gradient-to-r from-blue-500 to-violet-500 rounded-lg px-2">
               Message: {item.message}
@@ -78,8 +89,8 @@ const Message_Box = () => {
 
   return (
     <div className="relative bg-banner-gradient rounded-lg px-1 ml-5 w-[400px] text-white h-[500px] overflow-y-auto">
-      <div className="text-gray-400 font-bold sticky top-0 bg-banner-gradient py-1">
-        Message Box (refresh to view your message)
+      <div className="text-gray-400 font-bold sticky top-0 bg-banner-gradient py-1 text-center">
+        Message Box
       </div>
       <div className="mt-1">{messageElements}</div>
     </div>
@@ -90,7 +101,7 @@ const Chat_Box = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSend = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const trimmedMessage = message.trim();
     const trimmedName = name.trim();
@@ -98,22 +109,29 @@ const Chat_Box = () => {
       // message is empty or contains only whitespace characters
       return console.log("Error sending message: empty string");
     }
-    const timestamp = firebase.database.ServerValue.TIMESTAMP;
-    const filteredName = containsFoulWord(name) ? "***" : name;
-    const filteredMessage = containsFoulWord(message) ? "***" : message;
-    const data = { name, message, timestamp };
-    firebase
-      .database()
-      .ref("messages")
-      .push(data)
-      .then(() => {
-        console.log("Message sent successfully");
-        setName("");
-        setMessage("");
-      })
-      .catch((error) => {
-        console.error("Error sending message: ", error);
-      });
+
+    try {
+      const response = await axios.get("https://api.ipify.org?format=json");
+      const ip = response.data.ip;
+      const timestamp = firebase.database.ServerValue.TIMESTAMP;
+      const filteredName = containsFoulWord(name) ? "***" : name;
+      const filteredMessage = containsFoulWord(message) ? "***" : message;
+      const data = { name, message, timestamp, ip };
+      firebase
+        .database()
+        .ref("messages")
+        .push(data)
+        .then(() => {
+          console.log("Message sent successfully");
+          setName("");
+          setMessage("");
+        })
+        .catch((error) => {
+          console.error("Error sending message: ", error);
+        });
+    } catch (error) {
+      console.error("Error retrieving IP address: ", error);
+    }
   };
   return (
     <div className="relative group">

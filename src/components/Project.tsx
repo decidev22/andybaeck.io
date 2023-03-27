@@ -7,6 +7,8 @@ interface ProjectProps {
   status: string;
   type: string;
   description: string;
+  link?: string;
+  link_description?: string;
 }
 
 const Project_Form: React.FC<ProjectProps> = ({
@@ -15,6 +17,8 @@ const Project_Form: React.FC<ProjectProps> = ({
   status,
   type,
   description,
+  link,
+  link_description,
 }) => {
   return (
     <div className="py-2">
@@ -32,6 +36,9 @@ const Project_Form: React.FC<ProjectProps> = ({
           <div className="ml-1 text-green-600">Status: {status}</div>
         </div>
         <div className="mt-4">{description}</div>
+        <a href={link} className="text-indigo-400">
+          {link_description}
+        </a>
       </div>
     </div>
   );
@@ -64,6 +71,8 @@ const Project = () => {
                 by region. I have provided the team a Google Colab code on Python
                 that returns google street photos in panorama by provided
                 coornidates in a csv file."
+                link="https://colab.research.google.com/drive/1lhO4bK3c_7og1hwbTSO_6upMlws1X2mD?usp=sharing"
+                link_description="Click to see my code"
               />
               <Project_Form
                 title="TypeScript Blog"

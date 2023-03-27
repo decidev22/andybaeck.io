@@ -46,7 +46,7 @@ const Contact_Modal = () => {
               <div className="wave -three" />
               <p className="flex text-xs">Business Card</p>
               <p className="text-lg">Andy Baeck</p>
-              <p className="">Junior Software Engeinner</p>
+              <p className="">Junior Software Engineer</p>
               <br />
               <div>
                 <div

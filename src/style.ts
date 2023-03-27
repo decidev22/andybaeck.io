@@ -17,6 +17,9 @@ const styles = {
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
   wrapper: "absolute sticky top-0",
+  blogtitle: "text-[35px] text-blue-300 font-bold",
+  blogsubtitle: "ml-5 text-[25px] text-purple-400 font-semibold",
+  blogcontent: "ml-5 text-[12px] text-white",
 };
 
 export const layout = {
