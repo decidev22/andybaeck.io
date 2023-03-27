@@ -106,7 +106,7 @@ const About_Me = () => {
                     <Skill skill_item="Bachelor of Science in Computer Science (University of Auckland)" />
                     <Skill skill_item="Foundations of User Experience (UX) Design (Coursera)" />
                     <Skill skill_item="Back End Development and APIs (FreeCodeCamp)" />
-                    <Skill skill_item="Graph Developer - Associate (Appolo GraphQL)" />
+                    <Skill skill_item="Graph Developer - Associate (Apollo GraphQL)" />
 
                     <Skill skill_item="Serverless and Microservices for AWS (LinkedIn Learning)" />
 
