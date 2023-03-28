@@ -19,7 +19,8 @@ const styles = {
   wrapper: "absolute sticky top-0",
   blogtitle: "text-[35px] text-blue-300 font-bold",
   blogsubtitle: "ml-5 text-[25px] text-purple-400 font-semibold",
-  blogcontent: "ml-5 text-[12px] text-white",
+  blogcontent: "ml-5 text-[16px] text-gray-300 max-w-[800px]",
+  blogcontenttitle: "text-[20px] text-purple-400 max-w-[800px]",
 };
 
 export const layout = {

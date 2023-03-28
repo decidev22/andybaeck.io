@@ -26,9 +26,13 @@ const BlogForm: React.FC<ArticleProps> = ({ title, description, date }) => {
 };
 
 const Blog = () => {
-  const [blog, setBlog] = useState(false);
-  const toggleBlog = () => {
-    setBlog(!blog);
+  const [first_blog, set_first_Blog] = useState(false);
+  const toggle_first_Blog = () => {
+    set_first_Blog(!first_blog);
+  };
+  const [second_blog, set_second_Blog] = useState(false);
+  const toggle_second_Blog = () => {
+    set_second_Blog(!second_blog);
   };
   return (
     <section
@@ -44,25 +48,35 @@ const Blog = () => {
         <div>
           <div>
             {" "}
-            <BlogForm
-              title="Starting Blog"
-              description="Why I am starting blogging"
-              date="27 Mar 2023"
-            />
-            <button onClick={toggleBlog}>Read</button>
-            {blog && (
-              <div onClick={toggleBlog}>
+            <button onClick={toggle_first_Blog} className="text-left">
+              <BlogForm
+                title="Starting Blog"
+                description="Why I am starting blogging"
+                date="27 Mar 2023"
+              />
+            </button>
+            {first_blog && (
+              <div>
                 {" "}
                 <Starting_Blog />
               </div>
+            )}{" "}
+          </div>
+          <div>
+            <button onClick={toggle_second_Blog} className="text-left">
+              <BlogForm
+                title="Basics in TypeScript"
+                description="What you should really know in setting up typescript"
+                date="27 Mar 2023"
+              />
+            </button>
+            {second_blog && (
+              <div>
+                {" "}
+                <Second_Blog />
+              </div>
             )}
           </div>
-
-          <BlogForm
-            title="Basics in TypeScript"
-            description="What you should really know in setting up typescript"
-            date="27 Mar 2023"
-          />
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ const Main_Page = () => {
           className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 whitespace-normal`}
         >
           {/* <div className="absolute inset-0 rounded-lg"></div> */}
-          <div className="flex flex-1">
+          <div className="flex">
             <div className="flex flex-row h-min items-center py-[6px] px-4 bg-banner-gradient rounded-[10px] mb-2">
               <motion.div
                 className="flex flex-row"
@@ -62,6 +62,24 @@ const Main_Page = () => {
               </div>
             </div>
           </div>
+          <div className="flex mb-10">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-violet-600 blur group-hover:bg-gray-500 transition duration-1000 group-hover:duration-100"></div>
+              <div className="flex flex-row relative bg-gradient-to-r from-blue-700 to-violet-900 rounded-lg text-gray-200 px-2 py-1 font-poppins">
+                <div className="text-[18px] font-bold">
+                  What's NEW on my Blog:
+                </div>
+                <div className="flex flex-row ml-2 text-violet-200 text-[18px] font-semibold">
+                  Check out my real time Chat Box!
+                  <span className="relative flex justify-end h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Greeting />
           <motion.div
             className="flex flex-row justify-between items-between"

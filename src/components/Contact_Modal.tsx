@@ -24,8 +24,13 @@ const Contact_Modal = () => {
           <span className="grid place-items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-poppins font-bold opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
             Business Card
           </span>
+          <span className="relative flex justify-end h-1.5 w-1.5 mb-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+          </span>
         </button>
       </div>
+
       {modal && (
         <div className="modal font-poppins z-10">
           <div className="overlay" onClick={toggleModal}></div>
