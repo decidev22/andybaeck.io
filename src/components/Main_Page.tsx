@@ -108,7 +108,7 @@ const Main_Page = () => {
       </h1> */}
           <My_Interest />
         </div>
-        <div className="flex mt-5 xs:-mr-3 xs:scale-90 md:scale-100 md:mt-0 md:mr-10 justify-end">
+        <div className="flex mt-5 xs:-mr-3 xs:scale-90 md:scale-100 md:mt-0 md:mr-10 justify-start md:justify-end">
           {/* <SendMe_Message />
 
           <Message_Box /> */}
