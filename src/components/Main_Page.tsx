@@ -64,8 +64,8 @@ const Main_Page = () => {
           </div>
           <div className="flex mb-10">
             <div className="relative group">
-              <div className="absolute inset-0 bg-violet-600 blur group-hover:bg-gray-500 transition duration-1000 group-hover:duration-100"></div>
-              <div className="flex flex-row relative bg-gradient-to-r from-blue-700 to-violet-900 rounded-lg text-gray-200 px-2 py-1 font-poppins">
+              <div className="absolute inset-0 bg-violet-800 blur group-hover:bg-gray-600 transition duration-1000 group-hover:duration-100"></div>
+              <div className="flex flex-row relative bg-gradient-to-r from-indigo-900 to-gray-900 rounded-lg text-gray-200 px-2 py-1 font-poppins">
                 <div className="text-[18px] font-bold">
                   What's NEW on my Blog:
                 </div>
