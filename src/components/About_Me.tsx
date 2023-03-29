@@ -72,7 +72,7 @@ const About_Me = () => {
         <div className="flex xs:flex-col md:flex-row overflow-hidden">
           <div className="flex flex-col">
             <div className={`${styles.heading2} ml-14 text-white font-poppins`}>
-              Bringing dreams to realality <br className="ss:block hidden" />{" "}
+              Bringing dreams to reality <br className="ss:block hidden" />{" "}
             </div>
             <div
               className={`${styles.paragraph} ml-14 font-poppins text-[22px] leading-loose`}
