@@ -98,11 +98,13 @@ const Project = () => {
           </div>
           <div className="flex py-4 ml-14 text-white">
             <Project_Form
-              title="Test"
-              tech="Tech"
-              status="Trying"
-              type="Code"
-              description="This is description created using a TypeScript Interface"
+              title="AI Consult Chatbot"
+              tech="OpenAI api, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
+              status="Completed"
+              type="Web"
+              description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."
+              link="https://lifeconsult-chat-ab.pages.dev/"
+              link_description="Click to see the web-app"
             />
           </div>
         </div>

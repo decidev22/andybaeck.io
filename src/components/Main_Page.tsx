@@ -70,7 +70,7 @@ const Main_Page = () => {
                   What's NEW on my Blog:
                 </div>
                 <div className="flex flex-row ml-2 text-violet-200 text-[18px] font-semibold">
-                  Check out my real time Chat Box!
+                  Check out my AI Consult Chatbot v1.0 (Project)!
                   <span className="relative flex justify-end h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
