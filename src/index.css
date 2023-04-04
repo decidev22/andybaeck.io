@@ -440,4 +440,14 @@ body.active-modal {
   background: #494cde;
 }
 
-/* Blog */
+/* About Me Tile */
+
+.skillTile {
+  
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  border-radius: 1rem;
+}
