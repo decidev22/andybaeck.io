@@ -130,7 +130,23 @@ const Chat_Box = () => {
           console.error("Error sending message: ", error);
         });
     } catch (error) {
-      console.error("Error retrieving IP address: ", error);
+      const defaultIP = "0.0.0.0"; // provide a default IP address when it fails to get one
+      const timestamp = firebase.database.ServerValue.TIMESTAMP;
+      const filteredName = containsFoulWord(name) ? "***" : name;
+      const filteredMessage = containsFoulWord(message) ? "***" : message;
+      const data = { name, message, timestamp, ip: defaultIP };
+      firebase
+        .database()
+        .ref("messages")
+        .push(data)
+        .then(() => {
+          console.log("Message sent successfully");
+          setName("");
+          setMessage("");
+        })
+        .catch((error) => {
+          console.error("Error sending message: ", error);
+        });
     }
   };
   return (
