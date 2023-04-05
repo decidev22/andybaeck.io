@@ -97,36 +97,30 @@ const About_Me = () => {
           <span className="text-gradient-purple mb-3">About Me</span> {"  "}
         </h1>
         <div className="flex xs:flex-col overflow-hidden">
-          <div className="flex flex-col md:w-[800px]">
-            <div className={`${styles.heading2} ml-14 text-white font-poppins`}>
+          <div className="flex flex-col md:w-[1000px]">
+            <div className={`${styles.heading2} text-white font-poppins`}>
               Bringing dreams to reality <br className="ss:block hidden" />{" "}
             </div>
             <div
-              className={`${styles.paragraph} ml-14 font-poppins text-[22px] leading-loose`}
+              className={`${styles.paragraph} font-poppins text-[22px] leading-loose`}
             >
-              Innovating software with passion is key to success.{" "}
-              <br className="sm:block hidden" /> {"  "}I believe every code and
-              service can be improved. <br className="sm:block hidden" /> {"  "}
-              Sometimes it's the algorithm or design.{" "}
-              <br className="sm:block hidden" /> {"  "} Sometimes it's how we
-              see the world through software. <br className="sm:block hidden" />{" "}
-              Most importantly, it is how we dare to change the way we live.
-              <br className="sm:block hidden" /> {"  "}I love sharing thoughts
-              and learning new knowledge.
-              <br className="sm:block hidden" /> {"  "}
+              Innovating software with passion is key to success. I believe
+              every code and service can be improved. Sometimes it's the
+              algorithm or design.
+              <br className="sm:block hidden" /> Most importantly, it is how we
+              dare to change the way we live. I love sharing thoughts and
+              learning new knowledge and I can't wait to hear from you!
             </div>
             <br className="sm:block hidden" />
           </div>
           <div>
             {" "}
-            <div
-              className={`${styles.heading2} ml-14 text-white font-poppins `}
-            >
+            <div className={`${styles.heading2} text-white font-poppins mb-2`}>
               Skills and Certificates <br className="sm:block hidden" /> {"  "}
             </div>
             <div className="cert-box-ul">
               <motion.div
-                className={`${styles.paragraph} flex flex-row mt-4 ml-14 font-poppins leading-loose`}
+                className={`${styles.paragraph} flex flex-row mt-4 ml-5 font-poppins leading-loose`}
               >
                 <div className="flex min-w-full">
                   <div className="grid grid-rows-3 grid-flow-col gap-4">
@@ -268,7 +262,7 @@ const About_Me = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full md:flex-row sm:px-16 px-6 sm:py-6 py-4 overflow-x-hidden">
+      {/* <div className="flex w-full md:flex-row sm:px-16 px-6 sm:py-6 py-4 overflow-x-hidden">
         <>
           <ul ref={ref} className="flex w-4/5 skil-logo-box-ul">
             <li className="skill-log-li">
@@ -298,7 +292,7 @@ const About_Me = () => {
             </li>
           </ul>
         </>
-      </div>
+      </div> */}
     </section>
   );
 };

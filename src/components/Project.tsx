@@ -18,28 +18,29 @@ const Project_Form: React.FC<ProjectProps> = ({
   type,
   description,
   link,
-  link_description,
 }) => {
   return (
-    <div className="py-2">
-      <div className="bg-banner-gradient rounded-[10px] p-5 w-[900px]">
-        <div className="text-semibold ss:text-[30px] text-[22px] ss:leading-[50px] leading-[35px]">
-          {title}
-        </div>
-        <div className="flex flex-row">
-          <div>
-            <div className="w-auto h-auto bg-blue-600 rounded-lg px-1 text-[15px]">
-              {type}
+    <div className="py-2 ">
+      <a href={link}>
+        <div className="bg-transparent border border-gray-600 rounded-[10px] p-5 w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30">
+          <div className="text-semibold ss:text-[22px] text-[15px] leading-[30px] mb-4">
+            {title}
+          </div>
+          <div className="flex flex-row items-center py-2">
+            <div>
+              <div className="w-auto h-auto bg-blue-800 rounded-lg px-2 text-[15px]">
+                {type}
+              </div>
+            </div>
+            <div className="text-slate-200 px-2">{tech}</div>
+            <div className="ml-1 h-min bg-green-800 rounded-lg px-1 text-[12px]">
+              {status}
             </div>
           </div>
-          <div className="text-slate-400 px-2">Technology used: {tech}</div>
-          <div className="ml-1 text-green-600">Status: {status}</div>
+
+          <div className="mt-2 py-4">{description}</div>
         </div>
-        <div className="mt-4">{description}</div>
-        <a href={link} className="text-indigo-400">
-          {link_description}
-        </a>
-      </div>
+      </a>
     </div>
   );
 };
@@ -57,56 +58,47 @@ const Project = () => {
           {/* <br className="sm:block hidden" /> {"  "} */}
           <span className="text-gradient-blue">Projects</span> {"  "}
         </h1>
-        <div className="flex flex-row project-box-ul">
-          <div className="flex">
-            {/* This parent div, I want to make it so when the length of content is longer than pageview, it makes a horizaontal list, Ib might try to apply one same to skill list */}
-            <div className="py-4 ml-14 text-white">
-              <Project_Form
-                title="Python: Obtain Google Streetview Panorama by coordinates"
-                tech="Python GoogleMapsAPI"
-                status="Completed"
-                type="Code"
-                description="Participating in a project where we ran a machine learning
+        <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
+          <Project_Form
+            title="Python: Obtain Google Streetview Panorama by coordinates"
+            tech="Python GoogleMapsAPI"
+            status="Completed"
+            type="Code"
+            description="Participating in a project where we ran a machine learning
                 through street views, to study on how much green (plants and trees) were present
                 by region. I have provided the team a Google Colab code on Python
                 that returns google street photos in panorama by provided
                 coornidates in a csv file."
-                link="https://colab.research.google.com/drive/1lhO4bK3c_7og1hwbTSO_6upMlws1X2mD?usp=sharing"
-                link_description="Click to see my code"
-              />
-              <Project_Form
-                title="TypeScript Blog"
-                tech="TypeScript, JavaScript, Java"
-                status="Initiating"
-                type="Code"
-                description="Typescript is awesome, it is a language that is highly
+            link="https://colab.research.google.com/drive/1lhO4bK3c_7og1hwbTSO_6upMlws1X2mD?usp=sharing"
+          />
+          <Project_Form
+            title="TypeScript Blog"
+            tech="TypeScript, JavaScript, Java"
+            status="Initiating"
+            type="Code"
+            description="Typescript is awesome, it is a language that is highly
                 recommened by many developers. Many of the code samples
                 people find on guides and libraries are written in
                 JavaScript. Even though they are fairly similar and can easily be written one way or
                 the other, I noticed even some learners finding it hard to adopt to TypeScript.
                 This project is to show demos of TypeScript: How they work, What to expect, and How to style the code."
-              />
-              <Project_Form
-                title="Parable - Keep the details in your life"
-                tech="TypeScript, React Native, Firebase"
-                status="Designing"
-                type="Mobile App"
-                description="I believe there are still values to details in life that we
+          />
+          <Project_Form
+            title="Parable: Menifest your life"
+            tech="TypeScript, React Native, Firebase"
+            status="Designing"
+            type="Mobile"
+            description="I believe there are still values to details in life that we
               often forget."
-              />
-            </div>
-          </div>
-          <div className="flex py-4 ml-14 text-white">
-            <Project_Form
-              title="AI Consult Chatbot"
-              tech="OpenAI api, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
-              status="Completed"
-              type="Web"
-              description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."
-              link="https://lifeconsult-chat-ab.pages.dev/"
-              link_description="Click to see the web-app"
-            />
-          </div>
+          />
+          <Project_Form
+            title="AI Consult Chatbot"
+            tech="OpenAI api, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
+            status="Completed"
+            type="Web"
+            description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."
+            link="https://lifeconsult-chat-ab.pages.dev/"
+          />
         </div>
       </div>
     </section>
