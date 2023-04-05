@@ -14,7 +14,7 @@ interface ArticleProps {
 const BlogForm: React.FC<ArticleProps> = ({ title, description, date }) => {
   return (
     <div className="py-2">
-      <div className="flex inline-flex h-[200px] w-[200px] bg-tansparent border border-gray-700 rounded-lg p-2 ">
+      <div className="flex inline-flex h-[350px] w-[350px] bg-tansparent border border-gray-700 rounded-lg p-5 ">
         <div className="flex-col">
           <div className="w-full text-blue-300 text-[25px]">{title}</div>
           <div className="w-full text-white">{description}</div>
@@ -45,7 +45,7 @@ const Blog = () => {
         >
           <span className="text-gradient-green">Blog</span> {"  "}
         </h1>
-        <div>
+        <div className="ml-5">
           <div>
             {" "}
             <button onClick={toggle_first_Blog} className="text-left">

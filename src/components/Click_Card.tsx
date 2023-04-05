@@ -47,7 +47,7 @@ const Click_Card: React.FC<Props> = () => {
       </CardButton>
       {isOpen && (
         <CardContainer className="mb-10">
-          <div className="flex flex-col modal-content text-white overflow-hidden">
+          <div className="flex flex-col modal-content text-white overflow-hidden h-[230px]">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ rotate: 360, scale: 1 }}

@@ -400,7 +400,7 @@ body.active-modal {
   position: absolute;
   top: 3%;
   left: 50%;
-  background:#a131e2;
+  background:#b461e4;
   width: 300px;
   height: 300px;
   margin-left: 40px;
@@ -417,7 +417,7 @@ body.active-modal {
 .wave.-two {
   animation: drift 7000ms infinite linear;
   opacity: .1;
-  background: #fbedfb;
+  background: #f4c8f4;
 }
 
 @keyframes drift {
@@ -429,11 +429,11 @@ body.active-modal {
 .mainwave {
   opacity: .7;
   position: relative;
-  top: 350px;
-  right: -180%;
+  top: 160px;
+  right: -50%;
   background:#6b65bd;
-  width: 900px;
-  height: 900px;
+  width: 63px;
+  height: 63px;
   margin-left: 40px;
   margin-top: 0px;
   transform-origin: 50% 45%;
@@ -443,14 +443,14 @@ body.active-modal {
 
 .mainwave.-three {
   position: relative;
-  top: -1450px;
+  top: 30px;
   animation: drift 5000ms infinite linear;
   background:#5e50b0;
 }
 
 .mainwave.-two {
   position: relative;
-  top: -600px;
+  top: 100px;
   animation: drift 7000ms infinite linear;
   opacity: .1;
   background: #494cde;
