@@ -15,14 +15,14 @@ import {
 } from "../assets";
 
 // About Me, top part
-const skillAppear = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 },
-};
+// const skillAppear = {
+//   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+//   hidden: { opacity: 0, scale: 0 },
+// };
 
-interface SkillProps extends MotionProps {
-  skill_item: string;
-}
+// interface SkillProps extends MotionProps {
+//   skill_item: string;
+// }
 
 interface CertProps {
   cert: string;
@@ -35,7 +35,7 @@ interface CertProps {
 const Cert = ({ cert, issuer, date, bordercolor, textcolor }: CertProps) => {
   return (
     <div
-      className={`relative group h-[165px] w-[165px] rounded-lg border-2 border-gray-800`}
+      className={`relative group h-[165px] w-[165px] rounded-lg border-2 border-gray-800 hover:scale-110`}
     >
       <div
         className={`h-[155px] w-[155px] rounded-lg border-2 ${bordercolor} p-1 ${textcolor}`}
@@ -51,31 +51,31 @@ const Cert = ({ cert, issuer, date, bordercolor, textcolor }: CertProps) => {
   );
 };
 
-const Skill = ({ skill_item }: SkillProps) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+// const Skill = ({ skill_item }: SkillProps) => {
+//   const control = useAnimation();
+//   const [ref, inView] = useInView();
+//   useEffect(() => {
+//     if (inView) {
+//       control.start("visible");
+//     } else {
+//       control.start("hidden");
+//     }
+//   }, [control, inView]);
 
-  return (
-    <motion.div
-      className="skill font-semibold"
-      ref={ref}
-      variants={skillAppear}
-      initial="hidden"
-      animate={control}
-      transition={{ delay: 1 }}
-    >
-      <div className="hover:scale-110">{skill_item}</div>
-      <br className="sm:block hidden" />
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       className="skill font-semibold"
+//       ref={ref}
+//       variants={skillAppear}
+//       initial="hidden"
+//       animate={control}
+//       transition={{ delay: 1 }}
+//     >
+//       <div className="hover:scale-110">{skill_item}</div>
+//       <br className="sm:block hidden" />
+//     </motion.div>
+//   );
+// };
 
 // About Me Main part
 
@@ -96,8 +96,8 @@ const About_Me = () => {
           {/* <br className="sm:block hidden" /> {"  "} */}
           <span className="text-gradient-purple">About Me</span> {"  "}
         </h1>
-        <div className="flex xs:flex-col md:flex-row overflow-hidden">
-          <div className="flex flex-col">
+        <div className="flex xs:flex-col overflow-hidden">
+          <div className="flex flex-col md:w-[800px]">
             <div className={`${styles.heading2} ml-14 text-white font-poppins`}>
               Bringing dreams to reality <br className="ss:block hidden" />{" "}
             </div>
@@ -133,134 +133,24 @@ const About_Me = () => {
                     <Cert
                       cert="Bachelor of Science in Computer Science"
                       issuer="University of Auckland"
-                      date="2019 May"
+                      date="May 2019"
                       bordercolor="border-blue-500"
                       textcolor="text-blue-400"
                     />
                     <Cert
                       cert="Object-Oriented Programming in JavaScript"
                       issuer="Udemy"
-                      date="2021 Nov"
+                      date="Feb 2021"
                       bordercolor="border-teal-800"
                       textcolor="text-teal-400"
                     />
                     <Cert
                       cert="TypeScript Design Patterns"
                       issuer="Udemy"
-                      date="2021 Nov"
+                      date="Aug 2021"
                       bordercolor="border-teal-800"
                       textcolor="text-teal-400"
                     />
-
-                    <Cert
-                      cert="Back End Development and APIs"
-                      issuer="FreeCodeCamp"
-                      date="2021 Nov"
-                      bordercolor="border-violet-800"
-                      textcolor="text-violet-400"
-                    />
-
-                    <Cert
-                      cert="Graph Developer - Associate"
-                      issuer="Apollo GraphQL"
-                      date="2021 Nov"
-                      bordercolor="border-violet-800"
-                      textcolor="text-violet-400"
-                    />
-                    <Cert
-                      cert="Serverless and Microservices for AWS"
-                      issuer="LinkedIn Learning"
-                      date="2021 Nov"
-                      bordercolor="border-violet-800"
-                      textcolor="text-violet-400"
-                    />
-                    <Cert
-                      cert="Foundations of User Experience (UX) Design"
-                      issuer="Coursera-Google"
-                      date="2021 Nov"
-                      bordercolor="border-lime-800"
-                      textcolor="text-lime-400"
-                    />
-                    <Cert
-                      cert="Data Visualisation with Python"
-                      issuer="FutureLearn"
-                      date="2021 Nov"
-                      bordercolor="border-lime-800"
-                      textcolor="text-lime-400"
-                    />
-
-                    <Cert
-                      cert="Data Visualisation with Python: MATPLOTLIB and visual Analysis"
-                      issuer="FutureLearn"
-                      date="2021 Nov"
-                      bordercolor="border-lime-800"
-                      textcolor="text-lime-400"
-                    />
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="self-center w-10 h-10 ml-5"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </div>
-
-                <div className="flex min-w-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="w-10 h-10 self-center"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                    />
-                  </svg>
-
-                  <div className="grid grid-rows-3 grid-flow-col gap-4 ml-5">
-                    <Cert
-                      cert="Certified in Cybersecurity (CC) 1M"
-                      issuer="ISC2"
-                      date="2021 Nov"
-                      bordercolor="border-sky-800"
-                      textcolor="text-sky-400"
-                    />
-
-                    <Cert
-                      cert="CCNA R&S: Routing and Switching Essentials"
-                      issuer="Cisco"
-                      date="2021 Nov"
-                      bordercolor="border-sky-800"
-                      textcolor="text-sky-400"
-                    />
-
-                    <Cert
-                      cert="Security Operations and Administration ISC2"
-                      issuer="ISC2"
-                      date="2021 Nov"
-                      bordercolor="border-sky-800"
-                      textcolor="text-sky-400"
-                    />
-                    <Cert
-                      cert="Defense against the digital dark arts"
-                      issuer="Coursera-Google"
-                      date="2021 Nov"
-                      bordercolor="border-sky-800"
-                      textcolor="text-sky-400"
-                    />
-
                     <Cert
                       cert="Using Python to Interact with Operating System"
                       issuer="Coursera-Google"
@@ -276,9 +166,98 @@ const About_Me = () => {
                       textcolor="text-teal-400"
                     />
                     <Cert
+                      cert="Project Management: Agile Menifesto Principles"
+                      issuer="FutureLearn"
+                      date="2021 Nov"
+                      bordercolor="border-teal-800"
+                      textcolor="text-teal-400"
+                    />
+                    <Cert
+                      cert="Back End Development and APIs"
+                      issuer="FreeCodeCamp"
+                      date="2021 Nov"
+                      bordercolor="border-purple-800"
+                      textcolor="text-purple-400"
+                    />
+
+                    <Cert
+                      cert="Graph Developer - Associate"
+                      issuer="Apollo GraphQL"
+                      date="2021 Nov"
+                      bordercolor="border-purple-800"
+                      textcolor="text-purple-400"
+                    />
+                    <Cert
+                      cert="Serverless and Microservices for AWS"
+                      issuer="LinkedIn Learning"
+                      date="Nov 2022"
+                      bordercolor="border-purple-800"
+                      textcolor="text-purple-400"
+                    />
+                    <Cert
+                      cert="Foundations of User Experience (UX) Design"
+                      issuer="Coursera-Google"
+                      date="Apr 2021"
+                      bordercolor="border-lime-800"
+                      textcolor="text-lime-400"
+                    />
+                    <Cert
+                      cert="Data Visualisation with Python: Matplotlib"
+                      issuer="FutureLearn"
+                      date="Apr 2021"
+                      bordercolor="border-lime-800"
+                      textcolor="text-lime-400"
+                    />
+
+                    <Cert
+                      cert="Certified in Cybersecurity (CC) 1M"
+                      issuer="ISC2"
+                      date="Mar 2023"
+                      bordercolor="border-sky-800"
+                      textcolor="text-sky-400"
+                    />
+
+                    <Cert
+                      cert="CCNA R&S: Routing and Switching Essentials: Level2"
+                      issuer="Cisco"
+                      date="Jun 2018"
+                      bordercolor="border-sky-800"
+                      textcolor="text-sky-400"
+                    />
+                    <Cert
+                      cert="CCNA R&S: Introduction to Networks: Level1"
+                      issuer="Cisco"
+                      date="Jun 2017"
+                      bordercolor="border-sky-800"
+                      textcolor="text-sky-400"
+                    />
+
+                    <Cert
+                      cert="Security Operations and Administration"
+                      issuer="ISC2"
+                      date="2021 Nov"
+                      bordercolor="border-sky-800"
+                      textcolor="text-sky-400"
+                    />
+                    <Cert
+                      cert="Defense against the digital dark arts"
+                      issuer="Coursera-Google"
+                      date="2021 Nov"
+                      bordercolor="border-sky-800"
+                      textcolor="text-sky-400"
+                    />
+
+                    <Cert
                       cert="ArcGIS Pro Basics"
                       issuer="Esri"
                       date="2021 Nov"
+                      bordercolor="border-pink-800"
+                      textcolor="text-pink-400"
+                    />
+                    <Cert
+                      cert="Google Analytics for Beginners"
+                      issuer="Google Digital Academy"
+                      date="Feb 2019"
                       bordercolor="border-pink-800"
                       textcolor="text-pink-400"
                     />
