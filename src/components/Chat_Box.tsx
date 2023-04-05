@@ -44,7 +44,7 @@ const Message_Box = () => {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => console.log(error));
   };
@@ -100,9 +100,11 @@ const Message_Box = () => {
 const Chat_Box = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleSend = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSending(true);
     const trimmedMessage = message.trim();
     const trimmedName = name.trim();
     if (!(trimmedMessage && trimmedName)) {
@@ -128,6 +130,9 @@ const Chat_Box = () => {
         })
         .catch((error) => {
           console.error("Error sending message: ", error);
+        })
+        .finally(() => {
+          setIsSending(false);
         });
     } catch (error) {
       const defaultIP = "0.0.0.0"; // provide a default IP address when it fails to get one
@@ -143,9 +148,11 @@ const Chat_Box = () => {
           console.log("Message sent successfully");
           setName("");
           setMessage("");
+          setIsSending(false);
         })
         .catch((error) => {
           console.error("Error sending message: ", error);
+          setIsSending(false);
         });
     }
   };
@@ -184,8 +191,9 @@ const Chat_Box = () => {
                 whileHover={{ scale: 1.05 }}
                 className="w-full mt-2 mb-2 mr-2 p-2 bg-gradient-to-r from-blue-800 to-violet-700 rounded-lg font-bold h-min"
                 type="submit"
+                disabled={isSending}
               >
-                SEND MESSAGE
+                {isSending ? "Sending..." : "SEND MESSAGE"}
               </motion.button>
             </form>
           </div>
