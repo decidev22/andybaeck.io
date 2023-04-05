@@ -14,6 +14,8 @@ import Title_Array from "./Title_Array";
 import SendMe_Message from "./Sendme_Message";
 import Message_Box from "./Message_Box";
 import Chat_Box from "./Chat_Box";
+import ClickChat from "./Click_Chat";
+import Click_Card from "./Click_Card";
 
 export {
   Nav_Bar,
@@ -32,4 +34,6 @@ export {
   SendMe_Message,
   Message_Box,
   Chat_Box,
+  ClickChat,
+  Click_Card,
 };

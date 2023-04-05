@@ -94,7 +94,7 @@ const About_Me = () => {
           className={`${styles.heading1} flex font-poppins font-semibold ss:text-[60px] text-[52px] text-white ss:leading-[100px] leading-[75px]`}
         >
           {/* <br className="sm:block hidden" /> {"  "} */}
-          <span className="text-gradient-purple">About Me</span> {"  "}
+          <span className="text-gradient-purple mb-3">About Me</span> {"  "}
         </h1>
         <div className="flex xs:flex-col overflow-hidden">
           <div className="flex flex-col md:w-[800px]">

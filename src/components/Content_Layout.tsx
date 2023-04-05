@@ -12,6 +12,8 @@ import {
   Blog,
   Contact_Modal,
   Footer,
+  ClickChat,
+  Click_Card,
 } from "./index";
 // import Nav_Bar from "./Nav_Bar";
 // import Main_Page from "./Main_Page";
@@ -21,6 +23,8 @@ import {
 const Content_Layout = ({}) => {
   return (
     <div className="relative bg-primary w-full">
+      <Click_Card />
+      <ClickChat />
       <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
         <div className={`${styles.boxWidth}`}>
           {/* Waves removed from page for rebuild */}

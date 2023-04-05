@@ -57,15 +57,12 @@ const Main_Page = () => {
                 Remote <span className="text-white">Interested in:</span>{" "}
                 BackEnd, FrontEnd, SWE
               </p>
-              <div className="ml-5">
-                <Contact_Modal />
-              </div>
             </div>
           </div>
           <div className="flex mb-10">
             <div className="relative group">
               <div className="absolute inset-0 bg-violet-800 blur group-hover:bg-gray-600 transition duration-1000 group-hover:duration-100"></div>
-              <div className="flex flex-row relative bg-gradient-to-r from-indigo-900 to-gray-900 rounded-lg text-gray-200 px-2 py-1 font-poppins">
+              {/* <div className="flex flex-row relative bg-gradient-to-r from-indigo-900 to-gray-900 rounded-lg text-gray-200 px-2 py-1 font-poppins">
                 <div className="text-[18px] font-bold">
                   What's NEW on my Blog:
                 </div>
@@ -76,7 +73,7 @@ const Main_Page = () => {
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -108,12 +105,10 @@ const Main_Page = () => {
       </h1> */}
           <My_Interest />
         </div>
-        <div className="flex mt-5 xs:-mr-3 xs:scale-90 md:scale-100 md:mt-0 md:mr-10 justify-start md:justify-end">
-          {/* <SendMe_Message />
+        {/* <div className="flex mt-5 xs:-mr-3 xs:scale-90 md:scale-100 md:mt-0 md:mr-10 justify-start md:justify-end">
 
-          <Message_Box /> */}
           <Chat_Box />
-        </div>
+        </div> */}
       </div>
     </section>
   );
