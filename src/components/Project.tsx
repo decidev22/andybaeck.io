@@ -22,23 +22,25 @@ const Project_Form: React.FC<ProjectProps> = ({
   return (
     <div className="py-2 ">
       <a href={link}>
-        <div className="bg-transparent border border-gray-600 rounded-[10px] p-5 w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30">
-          <div className="text-semibold ss:text-[22px] text-[15px] leading-[30px] mb-4">
+        <div className="bg-transparent border border-gray-600 rounded-[10px] w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30">
+          <div className="p-4 bg-primary text-semibold ss:text-[22px] text-[15px] leading-[30px] mb-2 sticky top-0">
             {title}
           </div>
-          <div className="flex flex-row items-center py-2">
+          <div className="flex flex-row items-center py-2 px-4">
             <div>
-              <div className="w-auto h-auto bg-blue-800 rounded-lg px-2 text-[15px]">
+              <div className="w-auto h-auto bg-blue-800 rounded-lg px-2 text-[12px] mb-1 inline-flex">
                 {type}
               </div>
+              <div className="h-min bg-green-800 rounded-lg px-2 text-[12px]">
+                {status}
+              </div>
             </div>
-            <div className="text-slate-200 px-2">{tech}</div>
-            <div className="ml-1 h-min bg-green-800 rounded-lg px-1 text-[12px]">
-              {status}
+            <div className="text-slate-200 px-2 grid justify-items-center">
+              {tech}
             </div>
           </div>
 
-          <div className="mt-2 py-4">{description}</div>
+          <div className="mt-2 py-4 px-4">{description}</div>
         </div>
       </a>
     </div>
@@ -93,7 +95,7 @@ const Project = () => {
           />
           <Project_Form
             title="AI Consult Chatbot"
-            tech="OpenAI api, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
+            tech="OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
             status="Completed"
             type="Web"
             description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."

@@ -24,7 +24,7 @@ const Second_Blog = () => {
     "\n" +
     ">> Hello World!";
   return (
-    <div>
+    <div className="rounded-lg border border-gray-600 p-4">
       <h1 className={`${styles.blogtitle}`}>
         Important concepts in TypeScript
       </h1>

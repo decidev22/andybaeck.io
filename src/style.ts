@@ -17,10 +17,12 @@ const styles = {
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
   wrapper: "absolute sticky top-0",
-  blogtitle: "text-[35px] text-blue-300 font-bold",
-  blogsubtitle: "ml-5 text-[25px] text-purple-400 font-semibold",
-  blogcontent: "ml-5 text-[16px] text-gray-300 max-w-[800px]",
-  blogcontenttitle: "text-[20px] text-purple-400 max-w-[800px]",
+  blogtitle:
+    "text-[35px] bg-gradient-to-r from-sky-500 to-fuchsia-400 text-transparent bg-clip-text font-bold",
+  blogsubtitle:
+    "text-[22px] bg-gradient-to-r from-sky-400 to-fuchsia-300 text-transparent bg-clip-text font-semibold",
+  blogcontent: "text-[16px] text-zinc-300 max-w-[800px]",
+  blogcontenttitle: "text-[22px] text-slate-200 max-w-[800px] py-3",
 };
 
 export const layout = {

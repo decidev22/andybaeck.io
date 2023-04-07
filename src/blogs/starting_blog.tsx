@@ -1,7 +1,7 @@
 import styles from "../style";
 const Starting_Blog = () => {
   return (
-    <div>
+    <div className="rounded-lg border border-gray-600 p-4">
       <h1 className={`${styles.blogtitle}`}>It's not just "Blogging"...</h1>
       <h2 className={`${styles.blogsubtitle}`}>
         It's about organising thoughts and keeping my mind in order.
