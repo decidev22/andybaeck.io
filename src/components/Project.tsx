@@ -9,6 +9,7 @@ interface ProjectProps {
   description: string;
   link?: string;
   link_description?: string;
+  className?: string;
 }
 
 const Project_Form: React.FC<ProjectProps> = ({
@@ -18,32 +19,58 @@ const Project_Form: React.FC<ProjectProps> = ({
   type,
   description,
   link,
+  className,
 }) => {
+  const clickable = () => {
+    if (link) {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"
+          />
+        </svg>
+      );
+    }
+  };
   return (
-    <div className="py-2 ">
-      <a href={link}>
-        <div className="bg-transparent border border-gray-600 rounded-[10px] w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30">
-          <div className="p-4 bg-primary text-semibold ss:text-[22px] text-[15px] leading-[30px] mb-2 sticky top-0">
-            {title}
-          </div>
-          <div className="flex flex-row items-center py-2 px-4">
-            <div>
-              <div className="w-auto h-auto bg-blue-800 rounded-lg px-2 text-[12px] mb-1 inline-flex">
-                {type}
+    <a href={link} className={`py-2 ${className}`}>
+      <div className="relative">
+        <div className="absolute top-1 right-1 z-20">{clickable()}</div>
+        <div
+          className="bg-transparent border border-gray-600 rounded-[10px] w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30
+"
+        >
+          <div className="sticky top-0 bg-primary py-4">
+            <div className="px-4 text-semibold ss:text-[22px] text-[15px] leading-[30px]">
+              {title}
+            </div>
+            <div className="flex flex-row items-end px-4">
+              <div>
+                <div className="w-auto h-auto bg-blue-800 rounded-lg px-2 text-[12px] inline-flex">
+                  {type}
+                </div>
+                <div className="h-min bg-green-800 rounded-lg px-2 text-[12px]">
+                  {status}
+                </div>
               </div>
-              <div className="h-min bg-green-800 rounded-lg px-2 text-[12px]">
-                {status}
+              <div className="text-sky-100 px-2 grid justify-items-center">
+                {tech}
               </div>
             </div>
-            <div className="text-slate-200 px-2 grid justify-items-center">
-              {tech}
-            </div>
           </div>
-
           <div className="mt-2 py-4 px-4">{description}</div>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   );
 };
 
@@ -62,8 +89,8 @@ const Project = () => {
         </h1>
         <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
           <Project_Form
-            title="Python: Obtain Google Streetview Panorama by coordinates"
-            tech="Python GoogleMapsAPI"
+            title="Google Streetview Panorama by Coordinates"
+            tech="Python, GoogleMapsAPI"
             status="Completed"
             type="Code"
             description="Participating in a project where we ran a machine learning
@@ -86,7 +113,7 @@ const Project = () => {
                 This project is to show demos of TypeScript: How they work, What to expect, and How to style the code."
           />
           <Project_Form
-            title="Parable: Menifest your life"
+            title="Parable: Menifesting your goal"
             tech="TypeScript, React Native, Firebase"
             status="Designing"
             type="Mobile"
@@ -94,7 +121,7 @@ const Project = () => {
               often forget."
           />
           <Project_Form
-            title="AI Consult Chatbot"
+            title="OpenAI Consult Chatbot"
             tech="OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
             status="Completed"
             type="Web"
