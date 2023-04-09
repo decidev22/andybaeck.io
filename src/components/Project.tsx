@@ -122,7 +122,7 @@ const Project = () => {
           />
           <Project_Form
             title="OpenAI Consult Chatbot"
-            tech="OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
+            tech="Next13, OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
             status="Completed"
             type="Web"
             description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."

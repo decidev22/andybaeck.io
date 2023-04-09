@@ -84,8 +84,8 @@ const Main_Page = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
           >
-            <h1 className="flex-1 font-poppins font-semibold ss:text-[60px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
-              {/* <br className="sm:block hidden" /> {"  "} */}
+            <h1 className="flex-1 font-poppins font-semibold xs:text-[35px] ss:text-[60px] xl:text-[75px] text-white ss:leading-[100px] leading-[75px] xl:leading-[130px]">
+              My name is Andy, <br />
               <span className="text-gradient">Software Engineer</span> {"  "}
             </h1>
             {/* <div className="ss:flex sm:mr-30 md:mr-80 my-5 lg:mr-130">
@@ -97,7 +97,7 @@ const Main_Page = () => {
         </div> */}
           </motion.div>
 
-          <h1 className="font-poppins font-semibold ss:text-[65px] text-[50px] text-white ss:leading-[100px] leading-[75px]">
+          <h1 className="font-poppins font-semibold xs:text-[35px] ss:text-[60px] xl:text-[75px] text-[50px] text-white ss:leading-[100px] leading-[75px]">
             from New Zealand <br /> {"  "}I am interested in...
           </h1>
           {/* <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[80px] leading-[55px]">

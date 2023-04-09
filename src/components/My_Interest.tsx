@@ -43,7 +43,7 @@ class My_Interest extends React.Component {
       <ReactTextTransition
         children={texts[this.state.textIndex % texts.length]}
         springConfig={presets.stiff}
-        className="relative inline-flex h-auto flex-wrap text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-violet-400 xs:text-[60px] ss:text-[65px] text-white w-full xs:!whitespace-normal sm:!whitespace-nowrap"
+        className="relative inline-flex h-auto flex-wrap text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-violet-400 xs:text-[45px] ss:text-[65px] xl:text-[80px] text-white w-full xs:!whitespace-normal sm:!whitespace-nowrap"
         delay={100}
         inline
       />

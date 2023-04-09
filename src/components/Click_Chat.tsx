@@ -18,9 +18,13 @@ const ChatButton = styled.button`
 
 const ChatContainer = styled.div`
   position: fixed;
+  z-index: 9998;
+  @media screen and (max-width: 639px) {
+    bottom: 120px;
+    right: -10px;
+  }
   bottom: 20px;
   right: 100px;
-  z-index: 9998;
 `;
 
 interface Props {}

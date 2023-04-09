@@ -157,7 +157,7 @@ const Chat_Box = () => {
     }
   };
   return (
-    <div className="relative group">
+    <div className="relative group xs:scale-90 scale-100">
       <div className="absolute inset-0 bg-indigo-600 rounded-lg blur group-hover:bg-violet-400 transition duration-1000 group-hover:duration-100"></div>
       <div className="relative flex flex-col items-center ms:flex-row bg-banner-gradient rounded-lg">
         <Message_Box />

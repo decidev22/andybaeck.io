@@ -2,11 +2,7 @@ import styles from "../style";
 import React, { Component } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 
-const texts = [
-  "Hello, I'm Andy",
-  "Kia Ora, I'm Andy",
-  "안녕하세요, 저는 Andy입니다",
-];
+const texts = ["Hello,", "Kia Ora,", "안녕하세요,", "Good Day,"];
 const randomNumber = () => Math.floor(Math.random() * 9999999999 + 100000);
 
 class Greeting extends React.Component {
@@ -36,7 +32,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <span className="font-poppins font-semibold xs:text-[60px] ss:text-[55px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
+        <span className="font-poppins font-semibold xs:text-[45px] ss:text-[55px] xl:text-[80px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
           <ReactTextTransition
             children={texts[this.state.textIndex % texts.length]}
             springConfig={presets.gentle}

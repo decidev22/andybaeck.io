@@ -25,6 +25,7 @@ const Content_Layout = ({}) => {
     <div className="relative bg-primary w-full">
       <Click_Card />
       <ClickChat />
+
       <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
         <div className={`${styles.boxWidth}`}>
           <Main_Page />
