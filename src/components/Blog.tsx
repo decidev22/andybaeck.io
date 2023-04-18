@@ -5,6 +5,7 @@ import styles from "../style";
 import Starting_Blog from "../blogs/starting_blog";
 import Second_Blog from "../blogs/second_blog";
 import Blog_Code_Update from "../blogs/blog_code_updates";
+import About_GoodCode from "../blogs/about_good_code";
 
 interface ArticleProps {
   title: string;
@@ -27,7 +28,7 @@ const BlogForm: React.FC<ArticleProps> = ({ title, description, date }) => {
             </div>
           </div>
 
-          <div className="w-full text-white">{description}</div>
+          <div className="w-full text-white overflow-y-auto">{description}</div>
         </div>
       </div>
     </div>
@@ -40,18 +41,28 @@ const Blog = () => {
     set_first_Blog(!first_blog);
     set_second_Blog(false);
     set_blog_code_updates(false);
+    set_about_good_code(false);
   };
   const [second_blog, set_second_Blog] = useState(false);
   const toggle_second_Blog = () => {
     set_second_Blog(!second_blog);
     set_first_Blog(false);
     set_blog_code_updates(false);
+    set_about_good_code(false);
   };
   const [blog_code_updates, set_blog_code_updates] = useState(false);
   const toggle_blog_code_updates = () => {
     set_blog_code_updates(!blog_code_updates);
     set_first_Blog(false);
     set_second_Blog(false);
+    set_about_good_code(false);
+  };
+  const [about_good_code, set_about_good_code] = useState(false);
+  const toggle_about_good_code = () => {
+    set_about_good_code(!about_good_code);
+    set_first_Blog(false);
+    set_second_Blog(false);
+    set_blog_code_updates(false);
   };
   return (
     <section
@@ -68,6 +79,15 @@ const Blog = () => {
 
           <div className="flex flex-row ml-5">
             <div className="flex flex-col">
+              <div>
+                <button onClick={toggle_about_good_code} className="text-left">
+                  <BlogForm
+                    title="About a good project & code"
+                    description="I've had some issues on my past couple of projects. Top two issues I had were, 1) Not knowing enough of the framework. 2) My code ends up being not really scalable time to time."
+                    date="18 Apr 2023"
+                  />
+                </button>
+              </div>
               <div>
                 <button
                   onClick={toggle_blog_code_updates}
@@ -101,6 +121,12 @@ const Blog = () => {
               </div>
             </div>
             <div className="flex ml-5 py-2">
+              {about_good_code && (
+                <div>
+                  {" "}
+                  <About_GoodCode />
+                </div>
+              )}
               {blog_code_updates && (
                 <div>
                   {" "}

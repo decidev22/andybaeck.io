@@ -1,5 +1,4 @@
 import styles from "../style";
-import { render } from "react-dom";
 import AceEditor from "react-ace";
 import { useState } from "react";
 

@@ -89,6 +89,30 @@ const Project = () => {
         </h1>
         <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
           <Project_Form
+            title="Talent Park"
+            tech="Next13, React, TypeScript, Cloudflare, Firebase Realtime Database, Firebase Auth"
+            status="Version 0.1 Completed"
+            type="Web"
+            description="Ever got sick of getting an offer for the role you don't fit at all or having to look forever for that dream role to appear? Talent Park is exactly where you don't have to worry about that! Once uploaded your current and wanted positions, your details will be actively looked into by recruiters."
+            link="https://talent-park.pages.dev/"
+          />
+          <Project_Form
+            title="OpenAI Consult Chatbot"
+            tech="Next13, React, OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
+            status="Completed"
+            type="Web"
+            description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."
+            link="https://lifeconsult-chat-ab.pages.dev/"
+          />
+          <Project_Form
+            title="Parable: Menifesting your goal"
+            tech="TypeScript, React Native, Firebase"
+            status="Designing"
+            type="Mobile"
+            description="I believe there are still values to details in life that we
+              often forget."
+          />
+          <Project_Form
             title="Google Streetview Panorama by Coordinates"
             tech="Python, GoogleMapsAPI"
             status="Completed"
@@ -111,22 +135,6 @@ const Project = () => {
                 JavaScript. Even though they are fairly similar and can easily be written one way or
                 the other, I noticed even some learners finding it hard to adopt to TypeScript.
                 This project is to show demos of TypeScript: How they work, What to expect, and How to style the code."
-          />
-          <Project_Form
-            title="Parable: Menifesting your goal"
-            tech="TypeScript, React Native, Firebase"
-            status="Designing"
-            type="Mobile"
-            description="I believe there are still values to details in life that we
-              often forget."
-          />
-          <Project_Form
-            title="OpenAI Consult Chatbot"
-            tech="Next13, OpenAI API, TypeScript, Nodejs, Express, AWS Lambda, Cloudflare"
-            status="Completed"
-            type="Web"
-            description="This is where anyone can consult to an AI configured to answer your life related issues. I used TypeScript-Next13 frontend and hosted it on Cloudflare, while running my Express backend app on AWS Lambda."
-            link="https://lifeconsult-chat-ab.pages.dev/"
           />
         </div>
       </div>

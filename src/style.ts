@@ -22,7 +22,8 @@ const styles = {
   blogsubtitle:
     "text-[22px] bg-gradient-to-r from-sky-400 to-fuchsia-300 text-transparent bg-clip-text font-semibold",
   blogcontent: "text-[16px] text-zinc-300 max-w-[800px]",
-  blogcontenttitle: "text-[22px] text-slate-200 max-w-[800px] py-3",
+  blogcontenttitle:
+    "text-[22px] text-blue-400 max-w-[800px] py-3 font-semibold",
 };
 
 export const layout = {
