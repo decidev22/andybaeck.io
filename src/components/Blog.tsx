@@ -6,6 +6,7 @@ import Starting_Blog from "../blogs/starting_blog";
 import Second_Blog from "../blogs/second_blog";
 import Blog_Code_Update from "../blogs/blog_code_updates";
 import About_GoodCode from "../blogs/about_good_code";
+import Starting_Clean_Code from "../blogs/starting_on_clean_code";
 
 interface ArticleProps {
   title: string;
@@ -13,7 +14,11 @@ interface ArticleProps {
   date: string;
 }
 
-const BlogForm: React.FC<ArticleProps> = ({ title, description, date }) => {
+const BlogForm: React.FC<ArticleProps> = ({
+  title,
+  description,
+  date,
+}) => {
   return (
     <div className="py-2">
       <div className="flex inline-flex h-[150px] w-[425px] bg-tansparent border border-gray-700 rounded-lg p-5 overflow-y-hidden">
@@ -28,7 +33,9 @@ const BlogForm: React.FC<ArticleProps> = ({ title, description, date }) => {
             </div>
           </div>
 
-          <div className="w-full text-white overflow-y-auto">{description}</div>
+          <div className="w-full text-white overflow-y-auto">
+            {description}
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +49,7 @@ const Blog = () => {
     set_second_Blog(false);
     set_blog_code_updates(false);
     set_about_good_code(false);
+    set_about_clean_code(false);
   };
   const [second_blog, set_second_Blog] = useState(false);
   const toggle_second_Blog = () => {
@@ -49,6 +57,7 @@ const Blog = () => {
     set_first_Blog(false);
     set_blog_code_updates(false);
     set_about_good_code(false);
+    set_about_clean_code(false);
   };
   const [blog_code_updates, set_blog_code_updates] = useState(false);
   const toggle_blog_code_updates = () => {
@@ -56,10 +65,20 @@ const Blog = () => {
     set_first_Blog(false);
     set_second_Blog(false);
     set_about_good_code(false);
+    set_about_clean_code(false);
   };
   const [about_good_code, set_about_good_code] = useState(false);
   const toggle_about_good_code = () => {
     set_about_good_code(!about_good_code);
+    set_first_Blog(false);
+    set_second_Blog(false);
+    set_blog_code_updates(false);
+    set_about_clean_code(false);
+  };
+  const [about_clean_code, set_about_clean_code] = useState(false);
+  const toggle_about_clean_code = () => {
+    set_about_clean_code(!about_clean_code);
+    set_about_good_code(false);
     set_first_Blog(false);
     set_second_Blog(false);
     set_blog_code_updates(false);
@@ -80,7 +99,22 @@ const Blog = () => {
           <div className="flex flex-row ml-5">
             <div className="flex flex-col">
               <div>
-                <button onClick={toggle_about_good_code} className="text-left">
+                <button
+                  onClick={toggle_about_clean_code}
+                  className="text-left"
+                >
+                  <BlogForm
+                    title="Starting on Clean Code"
+                    description="I am starting to implement a clean coding to my new project 'DevNomad'."
+                    date="23 Apr 2023"
+                  />
+                </button>
+              </div>
+              <div>
+                <button
+                  onClick={toggle_about_good_code}
+                  className="text-left"
+                >
                   <BlogForm
                     title="About a good project & code"
                     description="I've had some issues on my past couple of projects. Top two issues I had were, 1) Not knowing enough of the framework. 2) My code ends up being not really scalable time to time."
@@ -102,7 +136,10 @@ const Blog = () => {
               </div>
               <div>
                 {" "}
-                <button onClick={toggle_first_Blog} className="text-left">
+                <button
+                  onClick={toggle_first_Blog}
+                  className="text-left"
+                >
                   <BlogForm
                     title="Blog -init"
                     description="Click to read why I started building this website and writing blogs."
@@ -111,7 +148,10 @@ const Blog = () => {
                 </button>
               </div>
               <div>
-                <button onClick={toggle_second_Blog} className="text-left">
+                <button
+                  onClick={toggle_second_Blog}
+                  className="text-left"
+                >
                   <BlogForm
                     title="Basics in TypeScript"
                     description="What you should really know in setting up typescript"
@@ -121,6 +161,12 @@ const Blog = () => {
               </div>
             </div>
             <div className="flex ml-5 py-2">
+              {about_clean_code && (
+                <div>
+                  {" "}
+                  <Starting_Clean_Code />
+                </div>
+              )}
               {about_good_code && (
                 <div>
                   {" "}

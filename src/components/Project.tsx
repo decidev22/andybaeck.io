@@ -44,7 +44,9 @@ const Project_Form: React.FC<ProjectProps> = ({
   return (
     <a href={link} className={`py-2 ${className}`}>
       <div className="relative">
-        <div className="absolute top-1 right-1 z-20">{clickable()}</div>
+        <div className="absolute top-1 right-1 z-20">
+          {clickable()}
+        </div>
         <div
           className="bg-transparent border border-gray-600 rounded-[10px] w-[350px] h-[350px] overflow-auto divide-y divide-solid divide-white/30
 "
@@ -89,6 +91,13 @@ const Project = () => {
         </h1>
         <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
           <Project_Form
+            title="DevNomad"
+            tech="Next13 (app router), React, TypeScript, Prisma, MongoDB"
+            status="Building"
+            type="Web"
+            description="True digital nomad experience comes from your ability to find where you can 'nomad'. DevNomad is a platform where you can share, upload, host Digital Nomad's workplace and review the locations around the world."
+          />
+          <Project_Form
             title="Talent Park"
             tech="Next13, React, TypeScript, Cloudflare, Firebase Realtime Database, Firebase Auth"
             status="Version 0.1 Completed"
@@ -107,7 +116,7 @@ const Project = () => {
           <Project_Form
             title="Parable: Menifesting your goal"
             tech="TypeScript, React Native, Firebase"
-            status="Designing"
+            status="Delayed"
             type="Mobile"
             description="I believe there are still values to details in life that we
               often forget."
@@ -127,7 +136,7 @@ const Project = () => {
           <Project_Form
             title="TypeScript Blog"
             tech="TypeScript, JavaScript, Java"
-            status="Initiating"
+            status="On going"
             type="Code"
             description="Typescript is awesome, it is a language that is highly
                 recommened by many developers. Many of the code samples
