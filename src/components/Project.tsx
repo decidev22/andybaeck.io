@@ -92,10 +92,11 @@ const Project = () => {
         <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
           <Project_Form
             title="DevNomad"
-            tech="Next13 (app router), React, TypeScript, Prisma, MongoDB"
-            status="Building"
+            tech="Next13 (app router), React, TypeScript, Prisma, MongoDB, Vercel"
+            status="Completed"
             type="Web"
             description="True digital nomad experience comes from your ability to find where you can 'nomad'. DevNomad is a platform where you can share, upload, host Digital Nomad's workplace and review the locations around the world."
+            link="https://dev-nomad-pwdb234rv-decidev22.vercel.app/"
           />
           <Project_Form
             title="Talent Park"
