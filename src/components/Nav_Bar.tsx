@@ -13,7 +13,12 @@ const draw = {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay, type: "spring", duration: 0.5, bounce: 0 },
+        pathLength: {
+          delay,
+          type: "spring",
+          duration: 0.5,
+          bounce: 0,
+        },
         opacity: { delay, duration: 0.01 },
       },
     };
@@ -33,7 +38,7 @@ const Nav_Bar = () => {
 
       <motion.div layout>
         <motion.div
-          className="flex flex-row relative -ml-3"
+          className="flex flex-row relative -ml-5"
           animate={{
             x: [-15, 5, -5, 0],
             rotate: [0, 10, 5, 15],
@@ -44,7 +49,11 @@ const Nav_Bar = () => {
             },
           }}
         >
-          <img src={logo} alt="jogger" className="w-[32px] h-[32px]" />
+          <img
+            src={logo}
+            alt="jogger"
+            className="w-[40px] h-[40px]"
+          />
         </motion.div>
       </motion.div>
 

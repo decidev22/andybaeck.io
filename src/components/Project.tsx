@@ -91,6 +91,13 @@ const Project = () => {
         </h1>
         <div className="py-4 ml-5 text-white grid grid-rows-2 grid-flow-col gap-4">
           <Project_Form
+            title="JoggerMessenger"
+            tech="Next13, React, TypeScript"
+            status="Initiated"
+            type="Web"
+            description="Can we create a work environment with messenger? We sure do have Slack already, but I think it can be better..."
+          />
+          <Project_Form
             title="DevNomad"
             tech="Next13 (app router), React, TypeScript, Prisma, MongoDB, Vercel"
             status="Completed"
